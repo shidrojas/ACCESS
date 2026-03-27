@@ -1,0 +1,218 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { scroll-behavior: smooth; }
+
+.App { text-align: center; }
+.App-logo { height: 40vmin; pointer-events: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo { animation: App-logo-spin infinite 20s linear; }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link { color: #61dafb; }
+
+@keyframes App-logo-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Landing Page */
+.landing-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
+
+.highlight { color: #4b8f87; }
+
+.landing-title h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-top: -130px;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  color: rgb(54, 54, 54);
+}
+
+.landing-title p {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 5px;
+  color: #b5b5b5b9;
+}
+
+#home { overflow: hidden; }
+
+#contents {
+  position: relative;
+  min-height: 100vh;
+  color: white;
+  background: #000;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+.no-radius { 
+  border-top-left-radius: 0 !important; 
+  border-top-right-radius: 0 !important; 
+}
+
+#contents::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; 
+  background: linear-gradient(to right, transparent 10%, rgb(165, 165, 165) 50%, transparent 90%);
+}
+
+#about, #updates { 
+  height: 100vh; 
+  background: #000; 
+  color: white; 
+}
+
+/* Buttons */
+.button-container { 
+  margin-top: 40px; 
+}
+
+.getstarted, .learnmore {
+  padding: 13px 45px;
+  font-family: 'Bebas Neue', sans-serif;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.getstarted { 
+  margin: 15px; 
+  border: none; 
+  background: black; 
+  color: white; 
+}
+
+.learnmore { 
+  margin: 25px; 
+  border: 1px solid #00000054; 
+  background: rgba(128,128,128,0.144); 
+  backdrop-filter: blur(10px); 
+  color: white; 
+}
+
+.getstarted:hover, 
+.learnmore:hover { 
+  transform: translateY(-10px); 
+}
+
+/* Project Content Section */
+.project-content-wrapper { 
+  width: 100%; 
+  padding: 80px 0; 
+  color: white; 
+  background: black; 
+}
+
+.project-content-tabs {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.project-content-tab {
+  background: none;
+  border: none;
+  color: #bbb;
+  padding-bottom: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.project-content-tab.active { color: white; border-bottom: 3px solid orangered; }
+
+.project-content-slider { width: 100%; overflow: hidden; }
+.project-content-track { display: flex; width: 100%; transition: transform 0.6s cubic-bezier(.25,.8,.25,1); }
+
+.project-content-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 60px;
+}
+
+.project-content-image-box {
+  width: 300px; height: 300px; 
+  border-radius: 20px; 
+  overflow: hidden;
+}
+
+.project-content-image-box img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain; 
+}
+
+.project-content-info { 
+  max-width: 450px; 
+}
+
+.project-content-info h2 { 
+  font-size: 40px; margin-bottom: 15px; 
+}
+
+.project-content-info p { 
+  font-size: 17px; opacity: 0.9; 
+}
+
+
+
+
+
+
+/* Titles */
+.content-title {
+  color: #d3d3d3;
+  font-weight: 800;
+  font-size: 3.2rem;
+  margin: 24px auto;
+  margin-top: 90px;
+  line-height: 1.4;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.content-title .accent { color:  #4b8f87; }
+
+.content-header{
+text-align: center;  
+margin-bottom: -30px;
+margin-top: 50px;
+}
+

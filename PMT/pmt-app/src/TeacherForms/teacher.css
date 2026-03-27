@@ -1,0 +1,2506 @@
+/* ==================== FONTS ==================== */
+.teacher-projects-bg,
+.teacher-projects-page,
+.teacher-projects-header-section,
+.teacher-projects-actions,
+.teacher-projects-title,
+.teacher-projects-desc,
+.teacher-projects-header-section h1,
+.teacher-projects-actions button,
+.teacher-search-input,
+.teacher-project-card,
+.teacher-modal-content,
+.teacher-modal-label,
+.teacher-modal-input,
+.teacher-input-warning,
+.teacher-project-owner,
+.teacher-project-title,
+.teacher-project-desc,
+.teacher-dashboard,
+.teacher-dashboard-mini-nav button,
+.teacher-project-dashboard-btn button,
+.teacher-stat-number,
+.teacher-stat-label,
+.teacher-stat-description,
+.teacher-settings-section-title,
+.teacher-settings-section-subtitle,
+.teacher-settings-profile-grid label,
+.teacher-settings-cancel-btn,
+.teacher-settings-save-btn,
+.settings-wrapper,
+.settings-content,
+.section-title,
+.account-header,
+.account-name,
+.account-email,
+.section-subtitle,
+.profile-grid label,
+.change-btn,
+.password-note,
+.modal-overlay,
+.modal,
+.modal-grid input,
+.modal-actions button,
+.change-update-settings-overlay,
+.change-update-settings-modal,
+.change-update-settings-otp,
+.otp-inputs input,
+.resend-otp button,
+.archives-dashboard,
+.archives-title,
+.archives-subtitle,
+.archives-nav,
+.archives-nav-btn,
+.archives-section,
+.archives-section-title,
+.archives-search,
+.archives-search-input,
+.archives-search-btn,
+.archives-placeholder,
+.archives-project-grid,
+.archives-project-card,
+.archives-course-badge,
+.archives-menu-container,
+.archives-menu-btn,
+.archives-menu-dropdown,
+.archives-menu-item,
+.restore-item,
+.delete-item,
+.archives-project-footer,
+.archives-project-course,
+.archives-project-owner,
+.archives-project-title,
+.archives-project-desc,
+.archives-project-time,
+.archives-tasks-table-container,
+.archives-tasks-table,
+.archives-task-row,
+.archives-task-title,
+.archives-task-desc,
+.archives-project-tag,
+.archives-course-tag,
+.archives-priority-badge,
+.archives-status-badge,
+.archives-table-menu-container,
+.archives-table-menu-btn,
+.archives-table-menu-dropdown,
+.archives-modal-overlay,
+.archives-modal-content,
+.archives-modal-close,
+.archives-modal-title,
+.archives-modal-warning,
+.archives-modal-message,
+.archives-modal-buttons,
+.archives-cancel-btn,
+.archives-confirm-btn {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* ==================== TEACHER PROJECTS PAGE ==================== */
+.teacher-projects-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.teacher-projects-bg {
+  background-color: #ffffff;
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px 20px;
+}
+
+.teacher-projects-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------- Header Section ---------- */
+.teacher-projects-header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.teacher-projects-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.teacher-projects-desc {
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+/* ---------- Action Buttons ---------- */
+.teacher-projects-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.teacher-btn {
+  padding: 10px 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.teacher-btn.add {
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid black;
+}
+
+.teacher-btn.add:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.teacher-btn.join {
+  background-color: black;
+  border: 1px solid white;
+}
+
+.teacher-btn.join:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.teacher-btn.cancel {
+  background-color: #aaa;
+}
+
+.teacher-btn.save {
+  background-color: #1e2a44;
+}
+
+.teacher-btn:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Recent Projects Section ---------- */
+.teacher-recent-projects-section {
+  margin-top: 50px;
+}
+
+.teacher-recent-projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.teacher-recent-projects-header h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111;
+}
+
+/* ---------- Search Bar - Expanding Circular Design ---------- */
+.teacher-search-bar {
+  --size: 30px;
+  --padding: 6px;
+  --expanded-width: 420px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 100px;
+  outline: 1px solid transparent;
+  overflow: hidden;
+  padding: var(--padding);
+  width: var(--size);
+  height: var(--size);
+  max-width: 100%;
+  transition: width 0.5s, outline 0.5s;
+  margin-left: auto;
+}
+
+.teacher-search-bar:focus-within {
+  width: var(--expanded-width);
+  outline: 1px solid #2e2e2e;
+}
+
+.teacher-search-input {
+  font-size: 18px;
+  color: #3a3a3a;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-inline: 1rem;
+  flex: auto;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.teacher-search-bar:focus-within .teacher-search-input {
+  opacity: 1;
+}
+
+.teacher-search-submit {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: black;
+  border-radius: 50%;
+  border: none;
+  width: calc(var(--size) - var(--padding) * 2);
+  aspect-ratio: 1;
+  cursor: pointer;
+  background-color: #eee;
+  transition: background 0.3s;
+}
+
+.teacher-search-submit:hover {
+  background-color: #ddd;
+}
+
+/* ---------- Project Cards Scrollable Container ---------- */
+.teacher-project-cards-scrollable {
+  max-height: 540px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Custom scrollbar styling */
+.teacher-project-cards-scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.teacher-project-cards-scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.teacher-project-cards-scrollable::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.teacher-project-cards-scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ---------- Project Cards Container ---------- */
+.teacher-project-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 5px;
+}
+
+/* ==================== OLD PROJECT CARD DESIGN ==================== */
+.teacher-project-card {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  min-height: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.teacher-project-owner {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.teacher-project-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  color: #000000;
+}
+
+.teacher-project-desc {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  flex-grow: 1;
+  color: #ffffff;
+}
+
+.teacher-project-time {
+  font-size: 11px;
+  opacity: 0.7;
+  text-align: right;
+  color: #ffffff;
+}
+
+
+/* ==================== NEW PROJECT CARD DESIGN ==================== */
+.teacher-new-project-card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  /* Remove the fixed max-width/min-width constraints */
+  max-width: none;
+  min-width: 0;
+}
+
+/* Remove or update this media query */
+@media screen and (max-width: 640px) {
+  .teacher-new-project-card-wrapper {
+    max-width: none;
+    min-width: 0;
+  }
+}
+
+.teacher-new-project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid rgba(0,0,0,0.9);
+  box-shadow: none;
+  transition: transform 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.teacher-new-project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: none;
+}
+
+.teacher-new-project-header {
+  position: relative;
+  height: 80px;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.teacher-new-project-owner-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  max-width: 120px;
+}
+
+@media screen and (max-width: 480px) {
+  .teacher-new-project-owner-badge {
+    max-width: 100px;
+  }
+}
+
+.teacher-new-project-owner-badge span {
+  display: inline-block;
+  border-radius: 9999px;
+  border: 2px solid rgba(0,0,0,0.8);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.teacher-new-project-time {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.8);
+  white-space: nowrap;
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 480px) {
+  .teacher-new-project-time {
+    right: 12px;
+    max-width: 60px;
+  }
+}
+
+.teacher-new-project-content {
+  position: relative;
+  background-color: #ffffff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+}
+
+.teacher-new-project-notch {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 1;
+  height: 30px;
+}
+
+.teacher-new-project-notch svg {
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+
+.teacher-new-project-notch-fill {
+  fill: #ffffff;
+}
+
+.teacher-new-project-body {
+  padding: 4px 12px 2px;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.teacher-new-project-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+.teacher-new-project-desc {
+  margin: 2px 0 0;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #666666;
+  opacity: 0.9;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 17px;
+}
+
+.teacher-new-project-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e5e5e5;
+  padding: 4px 10px;
+  flex-shrink: 0;
+  height: 32px;
+  margin-bottom: 10px;
+}
+
+.teacher-new-project-avatars {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 10px;
+}
+
+.teacher-new-project-avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.teacher-new-project-avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 9999px;
+  border: 2px solid #ffffff;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.teacher-new-project-avatar:nth-child(2) {
+  margin-left: -10px;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.teacher-new-project-avatar:nth-child(3) {
+  margin-left: -8px;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.teacher-new-project-member-count {
+  margin-left: 6px;
+  border-radius: 9999px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 3px 7px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-top: -3px;
+  line-height: 1.3;
+}
+
+/* Loading text style */
+.loading-text {
+  font-size: 14px;
+  color: #666;
+  margin-left: 8px;
+  font-weight: normal;
+}
+
+.teacher-new-project-view-btn {
+  border: none;
+  border-radius: 4px;
+  background-color: black;
+  color: #ffffff;
+  padding: 3px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  height: 22px;
+  line-height: 1;
+}
+
+.teacher-new-project-view-btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+/* ---------- Placeholder ---------- */
+.teacher-projects-placeholder {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #777;
+  min-height: 300px;
+}
+
+.teacher-projects-placeholder img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.teacher-projects-placeholder p {
+  font-size: 14px;
+}
+
+/* ==================== MODALS ==================== */
+.teacher-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 42, 68, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.teacher-modal-content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.teacher-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.teacher-modal-label {
+  display: block;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.teacher-modal-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.teacher-modal-input:focus {
+  border-color: #1e2a44;
+}
+
+.teacher-input-error {
+  border-color: #f44336;
+}
+
+.teacher-input-warning {
+  color: #f44336;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.teacher-modal-btn-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.color-options-row {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 20px 0;
+}
+
+.color-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+}
+
+.color-circle.selected {
+  border: 2px solid #000;
+}
+
+/* ==================== TEACHER DASHBOARD ==================== */
+.teacher-dashboard {
+  padding: 24px 40px;
+  color: #222;
+}
+
+/* ---------- User Header ---------- */
+.teacher-dashboard-user h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.teacher-dashboard-user p {
+  margin: 4px 0 20px;
+  font-size: 13px;
+  color: #555;
+}
+
+.teacher-projects-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  overflow: hidden;
+  background-color: #f5f7fa;
+}
+
+/* ---------- Mini Navbar ---------- */
+.teacher-dashboard-mini-nav {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.teacher-dashboard-mini-nav button {
+  background: none;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+.teacher-mini-nav-icon {
+  width: 28px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.teacher-dashboard-mini-nav button.active {
+  color: #ff6a00;
+  border-bottom: 3px solid #ff6a00;
+}
+
+.teacher-dashboard-mini-nav button:hover {
+  color: #ff6a00;
+}
+
+/* ---------- Dashboard Section ---------- */
+.teacher-dashboard-section {
+  margin-bottom: 36px;
+}
+
+.teacher-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.teacher-section-header h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.teacher-section-actions a {
+  font-size: 12px;
+  text-decoration: underline;
+  color: #222;
+}
+
+/* ---------- Dashboard Project Cards ---------- */
+.teacher-dashboard-project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.teacher-dashboard-project-card {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  min-height: 180px;
+  height: 180px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  box-shadow: none;
+}
+
+.teacher-dashboard-project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: none;
+}
+
+.teacher-dashboard-project-owner {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.teacher-dashboard-project-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.teacher-dashboard-project-desc {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  flex-grow: 1;
+  color: #000000;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  word-break: break-word;
+}
+
+.teacher-dashboard-project-time {
+  font-size: 11px;
+  opacity: 0.7;
+  text-align: right;
+  margin-top: auto;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* View All button styling - copied from AdminDashboard */
+.view-all-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+
+.modern-view-link {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.modern-view-link:hover {
+  color: #ff6a00;
+  background: rgba(255, 106, 0, 0.05);
+}
+
+.modern-view-link .arrow {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.modern-view-link:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Update the section header to accommodate the new view all button */
+.teacher-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.teacher-section-header h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Remove old section-actions styles if they exist */
+.teacher-section-actions {
+  display: none;
+}
+
+/* ---------- Project Dashboard Button ---------- */
+.teacher-project-dashboard-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.teacher-project-dashboard-btn button {
+  background: black;
+  color: white;
+  border: 2px solid black;
+  padding: 8px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.teacher-project-dashboard-btn button:hover {
+  background: white;
+  color: black;
+}
+
+/* ---------- Task Tabs ---------- */
+.teacher-task-tabs {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  border-bottom: 2px solid #eee;
+  margin: 24px 0 14px 0;
+}
+
+.teacher-task-tabs button {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  padding-bottom: 8px;
+  color: #333;
+}
+
+.teacher-task-tabs button.active {
+  color: #ff6a00;
+  border-bottom: 3px solid #ff6a00;
+}
+
+.teacher-task-tabs .teacher-view-all {
+  margin-left: auto;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* ---------- Task Table ---------- */
+.teacher-task-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.teacher-task-table thead {
+  background: #f6f6f6;
+}
+
+.teacher-task-table th,
+.teacher-task-table td {
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.teacher-task-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+/* ---------- Tag Styling ---------- */
+.teacher-tag.orange {
+  color: #ff6a00;
+  font-weight: 700;
+}
+
+.teacher-tag.green {
+  color: #2aa876;
+  font-weight: 700;
+}
+
+/* ==================== ANALYTICS & REPORTS ==================== */
+.teacher-analytics-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-x: hidden;
+}
+
+/* ---------- Stats Cards Row ---------- */
+.teacher-analytics-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.teacher-stat-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.teacher-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.teacher-stat-card.highlight {
+  background: linear-gradient(135deg, #ff6b00 0%, #ff8c3d 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 5px 14px rgba(255, 107, 0, 0.25);
+}
+
+.teacher-stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.teacher-stat-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.teacher-stat-description {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* ---------- Charts Row ---------- */
+.teacher-analytics-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.teacher-chart-box {
+  background: white;
+  border-radius: 10px;
+  height: 240px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  position: relative;
+}
+
+.teacher-chart-box::before {
+  content: "Chart Area";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  background: linear-gradient(45deg, #f9fafb 0%, #f3f4f6 100%);
+  pointer-events: none;
+}
+
+/* ---------- Report Box ---------- */
+.teacher-analytics-report-box {
+  background: white;
+  border-radius: 10px;
+  min-height: 220px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+}
+
+/* ==================== SETTINGS ==================== */
+.settings-wrapper {
+  display: flex;
+  min-height: 93vh;
+  background: #fff;
+  color: #1E2A44;
+  padding: 2rem 3rem;
+  margin-top: -50px;
+}
+
+.settings-content {
+  flex-grow: 1;
+  background: #fff;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #888;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1E2A44;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* ---------- Account Header ---------- */
+.account-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.account-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  background-size: cover;
+  background-position: center;
+}
+
+.account-name {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.account-email {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+/* ---------- Profile Grid ---------- */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2.5rem;
+}
+
+.profile-grid label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.35rem;
+}
+
+.profile-grid p {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+  color: #1E2A44;
+}
+
+/* ---------- Profile Actions ---------- */
+.profile-actions {
+  margin-top: 1.5rem;
+}
+
+.change-btn {
+  padding: 0.5rem 1.2rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.change-btn:hover {
+  background: #333;
+}
+
+/* ---------- Password Section ---------- */
+.password-note {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.password-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  max-width: 475px;
+}
+
+.password-row input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  background: #fff;
+  width: 300px;
+}
+
+/* ---------- Settings Modals ---------- */
+.modal-overlay,
+.change-update-settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(200, 200, 200, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal,
+.change-update-settings-modal,
+.change-update-settings-otp {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 450px;
+  max-width: 95%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.modal h3,
+.change-update-settings-modal h3,
+.change-update-settings-otp h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Modal Grid Inputs ---------- */
+.modal-grid,
+.change-update-settings-grid {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  justify-items: center;
+}
+
+.modal-grid input,
+.change-update-settings-grid input {
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* ---------- Modal Actions ---------- */
+.modal-actions,
+.change-update-settings-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+/* ---------- Avatar Upload ---------- */
+.avatar-upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.modal-avatar-preview {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+#avatarUpload {
+  display: none;
+}
+
+/* ---------- OTP Inputs ---------- */
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.otp-inputs input {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.otp-inputs input:focus {
+  border-color: #000;
+  outline: none;
+}
+
+/* ---------- Popup Buttons ---------- */
+.cancel-btn,
+.save-btn {
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.cancel-btn {
+  background: #ffffff;
+  color: #000000;
+  border-color: #999;
+}
+
+.cancel-btn:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.save-btn {
+  background: #1b1b1b;
+  color: #fff;
+  border-color: #000;
+}
+
+.save-btn:hover {
+  background: #ffffff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* ==================== ARCHIVES SECTION ==================== */
+.archives-dashboard {
+  padding: 24px 40px;
+  color: #222;
+}
+
+/* Archives Header */
+.archives-header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.archives-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: #222;
+}
+
+.archives-subtitle {
+  margin: 4px 0 20px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Archives Navigation */
+.archives-nav {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.archives-nav-btn {
+  background: none;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+.archives-nav-btn.active {
+  color: #ff6a00;
+  border-bottom: 3px solid #ff6a00;
+}
+
+.archives-nav-btn:hover {
+  color: #ff6a00;
+}
+
+.archives-nav-icon {
+  width: 28px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Archives Section */
+.archives-section {
+  margin-bottom: 36px;
+}
+
+.archives-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.archives-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  color: #222;
+}
+
+/* Archives Search */
+.archives-search {
+  --size: 30px;
+  --padding: 6px;
+  --expanded-width: 420px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 100px;
+  outline: 1px solid transparent;
+  overflow: hidden;
+  padding: var(--padding);
+  width: var(--size);
+  height: var(--size);
+  max-width: 100%;
+  transition: width 0.5s, outline 0.5s;
+  margin-left: auto;
+}
+
+.archives-search:focus-within {
+  width: var(--expanded-width);
+  outline: 1px solid #2e2e2e;
+}
+
+.archives-search-input {
+  font-size: 14px;
+  color: #3a3a3a;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-inline: 1rem;
+  flex: auto;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.archives-search:focus-within .archives-search-input {
+  opacity: 1;
+}
+
+.archives-search-btn {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: black;
+  border-radius: 50%;
+  border: none;
+  width: calc(var(--size) - var(--padding) * 2);
+  aspect-ratio: 1;
+  cursor: pointer;
+  background-color: #eee;
+  transition: background 0.3s;
+}
+
+.archives-search-btn:hover {
+  background-color: #ddd;
+}
+
+/* Archives Placeholder */
+.archives-placeholder {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #777;
+  min-height: 300px;
+}
+
+.archives-placeholder img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.archives-empty-text {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Archives Project Grid */
+.archives-project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* Archives Project Card */
+.archives-project-card {
+  position: relative;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  cursor: default;
+  min-height: 180px;
+  height: 180px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  box-shadow: none;
+}
+
+.archives-project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Archives Course Badge */
+.archives-course-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000;
+  z-index: 5;
+  backdrop-filter: blur(2px);
+}
+
+/* Archives Menu */
+.archives-menu-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.archives-menu-btn {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.archives-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.archives-menu-dropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.archives-menu-item {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.archives-menu-item:hover {
+  background: #f5f5f5;
+}
+
+.restore-item {
+  color: #28a745;
+  border-bottom: 1px solid #eee;
+}
+
+.delete-item {
+  color: #dc3545;
+}
+
+/* Archives Project Footer */
+.archives-project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.archives-project-course {
+  font-size: 10px;
+  opacity: 0.8;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.archives-project-owner {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.archives-project-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  color: #000000;
+}
+
+.archives-project-desc {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  flex-grow: 1;
+  color: #ffffff;
+}
+
+.archives-project-time {
+  font-size: 11px;
+  opacity: 0.7;
+  text-align: right;
+  color: #ffffff;
+}
+
+/* Archives Tasks Table */
+.archives-tasks-table-container {
+  background: white;
+  border-radius: 8px;
+  overflow: auto;
+  margin-top: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.archives-tasks-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 1000px;
+}
+
+.archives-tasks-table thead {
+  background: #f6f6f6;
+}
+
+.archives-tasks-table th {
+  padding: 12px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.archives-tasks-table td {
+  padding: 12px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.archives-task-row:hover {
+  background: #f9f9f9;
+}
+
+.archives-task-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.archives-task-desc {
+  font-size: 11px;
+  color: #777;
+  margin-top: 4px;
+  font-weight: normal;
+}
+
+.archives-project-tag {
+  background: #e5e7eb;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  color: #555;
+  font-weight: 500;
+}
+
+.archives-course-tag {
+  background: #e5e7eb;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Priority Badges */
+.archives-priority-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.archives-priority-badge.high {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.archives-priority-badge.medium {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.archives-priority-badge.low {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Status Badges */
+.archives-status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.archives-status-badge.completed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.archives-status-badge.archived {
+  background: #eeeeee;
+  color: #616161;
+}
+
+/* Table Actions Menu */
+.archives-table-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.archives-table-menu-btn {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.archives-table-menu-btn:hover {
+  background: #f0f0f0;
+}
+
+.archives-table-menu-dropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  z-index: 20;
+  overflow: hidden;
+}
+
+/* Archives Modal */
+.archives-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 42, 68, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.archives-modal-content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.archives-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.archives-modal-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.archives-modal-warning {
+  color: #dc3545;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.archives-modal-message {
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.archives-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.archives-cancel-btn {
+  background: #aaa;
+}
+
+.archives-cancel-btn:hover {
+  background: #999;
+}
+
+.archives-confirm-btn {
+  background-color: #1e2a44;
+}
+
+.archives-confirm-btn.restore-btn {
+  background-color: #28a745;
+}
+
+.archives-confirm-btn.restore-btn:hover {
+  background-color: #218838;
+}
+
+.archives-confirm-btn.delete-btn {
+  background-color: #dc3545;
+}
+
+.archives-confirm-btn.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media screen and (max-width: 1200px) {
+  .teacher-dashboard-project-grid,
+  .teacher-project-cards-container,
+  .archives-project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .teacher-analytics-charts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .teacher-dashboard-project-grid,
+  .teacher-project-cards-container,
+  .archives-project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .teacher-project-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+  
+  .teacher-project-card {
+    min-width: 200px;
+  }
+
+  .archives-nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .teacher-analytics-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-stat-number {
+    font-size: 1.8rem;
+  }
+
+  .teacher-chart-box {
+    height: 200px;
+  }
+
+  .teacher-task-tabs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .teacher-task-tabs .teacher-view-all {
+    margin-left: 0;
+  }
+  
+  .teacher-dashboard-project-grid,
+  .teacher-project-cards-container,
+  .archives-project-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .teacher-dashboard {
+    padding: 24px 20px;
+  }
+  
+  .archives-dashboard {
+    padding: 24px 20px;
+  }
+  
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .password-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ========================================================= */
+/* ============== DEADLINES TABLE STYLES ================== */
+/* ========================================================= */
+
+.deadlines-wrapper {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Stats Cards */
+.deadlines-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card.highlight {
+  background: linear-gradient(135deg, #ff6b00 0%, #ff8c3d 100%);
+  color: white;
+  border: none;
+}
+
+.stat-card.warning {
+  background: linear-gradient(135deg, #f5515f 0%, #9f041b 100%);
+  color: white;
+  border: none;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.stat-description {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  line-height: 1.3;
+}
+
+/* Deadlines Section */
+.deadlines-section {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+}
+
+.deadline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.deadline-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.deadline-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #666;
+  background: #f0f0f0;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Deadline Tabs */
+.deadline-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.deadline-tab {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.deadline-tab:hover {
+  color: #ff6a00;
+  background: #fff0e6;
+}
+
+.deadline-tab.active {
+  color: #ff6a00;
+  background: #fff0e6;
+}
+
+.tab-count {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #f0f0f0;
+  color: #666;
+}
+
+.tab-count.urgent {
+  background: #ff4757;
+  color: white;
+}
+
+.tab-count.warning {
+  background: #ffa502;
+  color: white;
+}
+
+.tab-count.info {
+  background: #1e90ff;
+  color: white;
+}
+
+/* Deadlines Table */
+.deadlines-table-container {
+  overflow-x: auto;
+  overflow-y: auto;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  max-height: 285px; /* Shows approximately 5 rows (48px each) + header (45px) */
+}
+
+/* Custom scrollbar styling for the deadlines table */
+.deadlines-table-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.deadlines-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.deadlines-table-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.deadlines-table-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox scrollbar styling */
+.deadlines-table-container {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.deadlines-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  min-width: 800px;
+}
+
+/* Sticky header */
+.deadlines-table thead {
+  position: sticky;
+  top: 0;
+  background: #f8f9fa;
+  z-index: 10;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.deadlines-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f8f9fa;
+  z-index: 10;
+  padding: 14px 12px;
+  text-align: left;
+  font-weight: 700;
+  color: #444;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.deadlines-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.deadline-row:hover {
+  background: #f8f9fa;
+}
+
+/* Task title font size fix */
+.deadline-task-title {
+  font-weight: 500 !important;
+  font-size: 0.8rem !important;
+  color: #1a1a1a;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Project name font size fix */
+.deadlines-table td .project-name {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #000000;
+}
+
+.project-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.assignee-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+}
+
+.assignee-name i {
+  color: #999;
+  font-size: 0.7rem;
+  width: 14px;
+}
+
+.due-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+  flex-wrap: wrap;
+}
+
+.due-date i {
+  color: #999;
+  font-size: 0.7rem;
+  width: 14px;
+}
+
+.due-date.urgent {
+  color: #ff4757;
+  font-weight: 600;
+}
+
+.due-date.warning {
+  color: #ffa502;
+  font-weight: 600;
+}
+
+.due-badge {
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background: #ff4757;
+  color: white;
+  margin-left: 4px;
+}
+
+/* Priority Badges */
+.priority-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.priority-badge.priority-high {
+  background: #ffebee;
+  color: #ff4757;
+}
+
+.priority-badge.priority-medium {
+  background: #fff3e0;
+  color: #ffa502;
+}
+
+.priority-badge.priority-low {
+  background: #e8f5e9;
+  color: #26de81;
+}
+
+/* Status Badges */
+.status-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.status-badge.status-progress {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-badge.status-pending {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.status-badge.status-not-started {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.status-badge.status-preparing {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+/* Table View Button */
+.table-view-btn {
+  padding: 4px 12px;
+  background: transparent;
+  border: 1px solid #ff6a00;
+  border-radius: 14px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #ff6a00;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.table-view-btn:hover {
+  background: #ff6a00;
+  color: white;
+}
+
+/* No Deadlines */
+.no-deadlines {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 0.9rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 2px dashed #e0e0e0;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .deadlines-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .deadline-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .deadline-tab {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .deadlines-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .deadline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .stat-card {
+    padding: 15px;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .deadlines-section {
+    padding: 15px;
+  }
+}
+

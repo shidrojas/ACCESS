@@ -1,0 +1,1375 @@
+  /* ---------- Projects Design Section ---------- */
+
+  /* Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+  /* Container for Projects */
+  .projects-bg {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    background: transparent;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+  }
+
+  .projects-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  /* Title and Description */
+  .projects-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #212328;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .projects-desc {
+    color: #444;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .projects-page p {
+    margin-bottom: 70px;
+  }
+
+  /* Buttons */
+  .projects-actions {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 12px 42px;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.2s;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 4px 0px #000;
+    background-color: #8acfa4;
+    color: black;
+  }
+
+  .join {
+    background: black;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 7px 7px 0px 0px #000;
+  }
+
+  .add {
+    background: #fff;
+    color: black;
+    border: 2px solid black;
+    box-shadow: 7px 7px 0px 0px #000;
+  }
+
+  /* Recent Projects Section */
+  .recent-projects-section {
+    width: 95%;          /* slightly wider than main text */
+    max-width: 1200px;
+    margin: 30px auto 0 auto;  /* center horizontally */
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .recent-projects-header {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    gap: 16px;
+    padding: 0 40px;       /* optional, keeps header content from touching edges */
+    max-width: 100%;       /* stretch across the viewport */
+    box-sizing: border-box;
+  }
+
+
+.recent-projects-header h2 {
+ margin: 0;
+  padding-left: 0;
+  
+}
+
+
+  /* Search Bar */
+  .search-bar {
+    --size: 30px;
+    --padding: 6px;
+    --expanded-width: 420px;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 100px;
+    outline: 1px solid transparent;
+    overflow: hidden;
+    padding: var(--padding);
+    width: var(--size);
+    height: var(--size);
+    max-width: 100%;
+    transition: width 0.5s, outline 0.5s;
+  margin-left: auto;
+  }
+
+  .search-bar:focus-within {
+    width: var(--expanded-width);
+    outline: 1px solid #2e2e2e;
+  }
+
+  .search-input {
+    font-size: 18px;
+    color: #3a3a3a;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-inline: 1rem;
+    flex: auto;
+    font-family: 'Rajdhani', sans-serif;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .search-bar:focus-within .search-input {
+    opacity: 1;
+  }
+
+  .search-submit {
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: black;
+    border-radius: 50%;
+    border: none;
+    width: calc(var(--size) - var(--padding) * 2);
+    aspect-ratio: 1;
+    cursor: pointer;
+  }
+
+  /* Placeholder Projects */
+  .projects-placeholder {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+  }
+
+  .projects-placeholder-img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .projects-placeholder p {
+    font-size: 1.2rem;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* ---------- Modal ---------- */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+
+  .modal-content {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    min-width: 340px;
+    max-width: 420px;
+    width: 100%;
+    padding: 26px 28px 20px 28px;
+    position: relative;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 13px;
+    right: 18px;
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 19px;
+    letter-spacing: 0.6px;
+  }
+
+  .modal-label {
+    font-size: 1.07rem;
+    font-weight: 600;
+    margin: 14px 0 4px 0;
+    display: block;
+  }
+
+  .modal-input,
+  .modal-textarea {
+    font-size: 1.02rem;
+    width: 100%;
+    border: 1.3px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 11px;
+    margin-bottom: 4px;
+    background: #fff;
+    resize: none;
+  }
+
+  .input-error {
+    border-color: #d33434;
+  }
+
+  .input-warning {
+    color: #d33434;
+    font-size: 0.93rem;
+    margin-bottom: 8px;
+    margin-top: 0;
+    font-weight: 500;
+  }
+
+  .modal-btn-row {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    margin-top: 16px;
+  }
+
+  .btn.cancel {
+    background: #f6f6f6;
+    border: 2px solid #000;
+    color: #2a2a2a;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 7px 7px 0px 0px #000;
+  }
+
+  .btn.save {
+    background: #0a0a0a;
+    color: #fff;
+    border: 2px solid white;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 7px 7px 0px 0px #000;
+  }
+
+  .btn.cancel:hover,
+  .btn.save:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 4px 0px #000;
+    background-color: #8acfa4;
+    color: black;
+  }
+
+  .modal-input:focus,
+  .modal-textarea:focus {
+    border-color: #7c7cf8;
+    outline: none;
+  }
+
+
+  .section-divider2 {
+    width: 1010px;      
+    height: 3px;
+    background-color: #d0d0d0;
+    margin: 20px 0;
+    border-radius: 2px;
+  }
+
+
+
+
+
+
+
+
+  
+  /* this is where the css for the settings are */
+
+  .settings-account-page * {
+    box-sizing: border-box;
+  }
+
+  /* Page Wrapper */
+  .settings-account-page .account-wrapper {
+    background-color: #ffffff;
+  
+    padding: 20px 40px;
+    color: #1f1f1f;
+    font-family: 'Rajdhani', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    justify-content: flex-start;
+    overflow-y: hidden;
+  }
+
+  /* Titles */
+  .settings-account-page .account-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #1f1f1f;
+  }
+
+  .settings-account-page .account-subtext {
+    color: #5a5a5a;
+    margin-bottom: 20px;
+    max-width: 600px;
+  }
+
+  /* Section */
+  .settings-account-page .section {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .settings-account-page .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .settings-account-page .section-description {
+    color: #5a5a5a;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  /* Inputs */
+  .settings-account-page .input-block {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .settings-account-page .label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333333;
+    font-weight: 600;
+  }
+
+  .settings-account-page .dropdown {
+    width: 100%;
+    padding: 12px;
+    background-color: #f6f6f6;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    color: #1f1f1f;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  /* Delete Button */
+  .settings-account-page .delete-btn {
+    background-color: #c9372c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+  }
+
+  .settings-account-page .delete-btn:hover {
+    background-color: #ad2f26;
+  }
+
+  /* this is where the profile section will appear */
+
+
+  .profile-container {
+    font-family: 'Rajdhani', sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 22px 26px;
+    position: relative;
+    background: #fff;
+  }
+
+  .profile-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2.5px solid #2393af;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .profile-name {
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .profile-date {
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    color: #222;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+
+  .edit-btn {
+    position: absolute;
+    right: 30px;
+    bottom: 22px;
+    background: #222;
+    color: #fff;
+    padding: 7px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .profile-info-card {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-top: 20px;
+    background: #fff;
+  }
+
+  .info-title {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 1rem;
+    margin-top: 18px;
+    color: #222;
+  }
+
+  .info-value {
+    font-size: 1rem;
+    color: #707070;
+    margin-bottom: 4px;
+  }
+
+  .profile-password-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin-top: 20px;
+    background: #fff;
+  }
+
+  .password-hint {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+
+  .password-stars {
+    letter-spacing: 0.3em;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #222;
+  }
+
+  .last-change {
+    font-size: 0.86rem;
+    color: #b0b0b0;
+    margin-top: 3px;
+  }
+
+  .change-password-btn {
+    background: #222;
+    color: #fff;
+    padding: 7px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+
+  /* this section shows the projects cards design */
+
+  .project-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+   max-width: 1100px;  
+  margin: 0 auto;   
+  }
+
+  .project-card {
+  flex: 0 0 calc(25% - 18px);
+  max-width: calc(25% - 18px);
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  background: #43726d;
+  color: #fff;
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(60,60,60,0.11);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+
+.project-card:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(30,60,60,0.18);
+}
+
+/* Colors */
+.card-green { background: #43726d; }
+.card-blue { background: #264e86; }
+.card-purple { background: #5a3ea6; }
+.card-red { background: #a63e3e; }
+.card-yellow { background: #d1a53e; }
+
+.project-owner {
+  font-size: 1em;
+  font-weight: 600;
+  color: #bbdfd8;
+  margin-bottom: 3px;
+}
+
+.project-title {
+  font-size: 1.22em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.project-desc {
+  font-size: 1em;
+  opacity: 0.92;
+  margin-bottom: 8px;
+}
+
+.project-divider {
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  margin: 7px 0 8px 0;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .project-time {
+    font-size: 0.96em;
+    color: #fff;
+  }
+
+  .project-members {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .project-folder {
+    margin-left: 8px;
+  }
+
+  .project-cards-scroll {
+  max-height: 360px; /* adjust as needed */
+  overflow-y: auto;
+  padding-right: 10px; /* for scrollbar spacing */
+}
+
+/* Popup Common Styles */
+.small-popup {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  padding: 24px 32px;
+  width: 320px;
+  max-width: 90vw;
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+  color: #222;
+  position: relative;
+  z-index: 110;
+}
+
+.small-popup h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.small-popup p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Button Row for Popup */
+.popup-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Popup Buttons Styling */
+.small-popup .btn.cancel {
+  background: #f4f4f4;
+  border: 2px solid #999;
+  color: #555;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #999;
+  transition: all 0.2s ease;
+}
+
+.small-popup .btn.cancel:hover {
+  background: #ddd;
+  color: #222;
+  box-shadow: 2px 2px 0 #666;
+  transform: translateY(-2px);
+}
+
+.small-popup .btn.save {
+  background: #1b1b1b;
+  border: 2px solid #000;
+  color: white;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #000;
+  transition: all 0.2s ease;
+}
+
+.small-popup .btn.save:hover {
+  background: #3cb371;
+  color: #000;
+  box-shadow: 2px 2px 0 #2e8b57;
+  transform: translateY(-2px);
+}
+
+
+
+
+/* ========================================================= */
+/* ===================== DASHBOARD ========================= */
+/* ========================================================= */
+
+.dashboard {
+  padding: 24px 40px;
+  font-family: 'Rajdhani', sans-serif;
+  color: #222;
+}
+
+/* USER HEADER */
+.dashboard-user h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.dashboard-user p {
+  margin: 4px 0 20px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* =============================== SETTINGS PAGE =============================== */
+.settings-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 93.6vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================= Sidebar ================= */
+.settings-sidebar {
+  width: 230px;
+  padding: 40px 0;
+  border-right: 1px solid #d0d0d0;
+  background: #fff;
+}
+
+.settings-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #7a7a7a;
+  margin: 0 0 15px 20px;
+}
+
+.settings-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.settings-menu li {
+  padding: 12px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.settings-menu li.active,
+.settings-menu li:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* ================= Content ================= */
+.settings-content {
+  flex: 1;
+  padding: 40px 60px;
+  background: #fff;
+}
+
+/* Titles */
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 30px 0 15px;
+}
+
+/* ================= Account Header ================= */
+.account-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.account-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 0.5px solid black;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.account-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.account-email {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* ================= Profile Info ================= */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px 60px;
+}
+
+.profile-grid label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-grid p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ================= Buttons ================= */
+.change-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.change-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Edit button above divider */
+.profile-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+
+/* ================= Divider ================= */
+hr {
+  margin: 15px 0 35px;
+  border: none;
+  border-top: 1px solid #d0d0d0;
+}
+
+/* ================= Password ================= */
+.password-note {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.password-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.password-row input {
+  padding: 8px 12px;
+  width: 260px;
+  border-radius: 6px;
+  border: 1px solid #888;
+}
+
+.password-date {
+  font-size: 11px;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* ================= Modal ================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #fff;
+  width: 450px;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.modal h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ================= Avatar Upload ================= */
+.avatar-upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.modal-avatar-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #aaa;
+  background-color: white; 
+  background-size: cover;    
+  background-position: center; 
+  background-repeat: no-repeat; 
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-avatar-preview:hover {
+  border-color: black;
+  transform: scale(1.05);
+}
+
+/* Hide default file input */
+.avatar-upload-section input[type="file"] {
+  display: none;
+}
+
+/* ================= Modal Grid ================= */
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.modal-grid input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+}
+
+/* ================= Modal Actions ================= */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background: #ccc;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 900px) {
+  .settings-wrapper {
+    flex-direction: column;
+  }
+
+  .settings-sidebar {
+    width: 100%;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-actions {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+/* ================= MINI NAVBAR ================= */
+
+.dashboard-mini-nav {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+/* MINI NAVBAR ICON */
+.dashboard-mini-nav .mini-nav-icon {
+  width: 28px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.dashboard-mini-nav button {
+  background: none;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+
+  
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+
+  /* CAPS STYLE */
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+/* ICON STYLE */
+.dashboard-mini-nav button svg,
+.dashboard-mini-nav button i {
+  font-size: 14px;
+}
+
+/* ACTIVE STATE */
+.dashboard-mini-nav button.active {
+  color: #ff6a00;
+  border-bottom: 3px solid #ff6a00;
+}
+
+/* HOVER */
+.dashboard-mini-nav button:hover {
+  color: #ff6a00;
+}
+
+/* RECENT PROJECTS */
+.dashboard-section {
+  margin-bottom: 36px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h4 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.section-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.section-actions select {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.section-actions a {
+  font-size: 12px;
+  text-decoration: underline;
+  color: #222;
+}
+
+/* PROJECT PLACEHOLDER */
+.projects-placeholder {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+}
+
+.projects-placeholder img {
+  width: 140px;
+  margin-bottom: 12px;
+}
+
+.projects-placeholder p {
+  font-size: 14px;
+}
+
+/* TASK TABS */
+.task-tabs {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 14px;
+}
+
+.task-tabs button {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  padding-bottom: 8px;
+  color: #333;
+}
+
+.task-tabs button.active {
+  color: #ff6a00;
+  border-bottom: 3px solid #ff6a00;
+}
+
+.task-tabs .view-all {
+  margin-left: auto;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* TASK TABLE */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.task-table thead {
+  background: #f6f6f6;
+}
+
+.task-table th,
+.task-table td {
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.task-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.tag.orange {
+  color: #ff6a00;
+  font-weight: 700;
+}
+
+.tag.green {
+  color: #2aa876;
+  font-weight: 700;
+}
+
+/* ========================================================= */
+/* ===================== SETTINGS ========================== */
+/* ========================================================= */
+
+.settings-account-page .account-wrapper {
+  background: #fff;
+  padding: 20px 40px;
+  font-family: 'Rajdhani', sans-serif;
+  text-align: center;
+}
+
+/* ========================================================= */
+/* ===================== PROFILE =========================== */
+/* ========================================================= */
+
+.profile-container {
+  font-family: 'Rajdhani', sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* ========================================================= */
+/* ===================== PROJECT CARDS ===================== */
+/* ========================================================= */
+
+.project-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-card {
+  flex: 0 0 calc(25% - 18px);
+  background: #43726d;
+  color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+
+
+/* =============================================
+   ANALYTICS & REPORTS SECTION (SCALED FIX)
+   ============================================= */
+
+.analytics-wrapper {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-x: hidden; /* prevent overlay */
+}
+
+/* Stats Cards Row */
+.analytics-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card.highlight {
+  background: linear-gradient(135deg, #ff6b00 0%, #ff8c3d 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 5px 14px rgba(255, 107, 0, 0.25);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.stat-description {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* Charts Row */
+.analytics-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.chart-box {
+  background: white;
+  border-radius: 10px;
+  height: 240px; /* REDUCED */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Placeholder */
+.chart-box::before {
+  content: "Chart Area";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  background: linear-gradient(45deg, #f9fafb 0%, #f3f4f6 100%);
+  pointer-events: none;
+}
+
+/* Lower full-width report box */
+.analytics-report-box {
+  background: white;
+  border-radius: 10px;
+  min-height: 220px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .analytics-charts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .analytics-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .chart-box {
+    height: 200px;
+  }
+}
+
+
+
+
+
+
