@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.784daeb7.css",
+    "main.js": "/static/js/main.bb90cd67.js",
+    "static/js/453.d3f4205d.chunk.js": "/static/js/453.d3f4205d.chunk.js",
+    "static/media/projectplaceholder.png": "/static/media/projectplaceholder.9a41c4d00619f723813f.png",
+    "static/media/logo1.png": "/static/media/logo1.0b9b43210f8965276ae3.png",
+    "static/media/logo2.png": "/static/media/logo2.1e6a267394317b6ba70a.png",
+    "static/media/dashboard.png": "/static/media/dashboard.497ce03631eb99cde1e6.png",
+    "static/media/hide.png": "/static/media/hide.c8e4c3c8b8ae83215686.png",
+    "static/media/placeholder-projects.png": "/static/media/placeholder-projects.7c0decd31edb62b9e4c4.png",
+    "static/media/show.png": "/static/media/show.f5f25e723de2f1704d9a.png",
+    "static/media/task.png": "/static/media/task.33dc1bb8d1050d7a83c0.png",
+    "static/media/kanban.png": "/static/media/kanban.abe18641ab2f2940c4f9.png",
+    "static/media/prjctandtask.jpg": "/static/media/prjctandtask.5b3a07f4f88d59b3535a.jpg",
+    "index.html": "/index.html",
+    "main.784daeb7.css.map": "/static/css/main.784daeb7.css.map",
+    "main.bb90cd67.js.map": "/static/js/main.bb90cd67.js.map",
+    "453.d3f4205d.chunk.js.map": "/static/js/453.d3f4205d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.784daeb7.css",
+    "static/js/main.bb90cd67.js"
+  ]
+}
